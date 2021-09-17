@@ -1,9 +1,15 @@
+github.com/TheBoringDude/go-urljoin v0.0.0-20210915051633-a34cd1bd9546 h1:AFzaQr5IGwfurXKokhPzim4/5jyrup09CBYzdwt6Qtw=
+github.com/TheBoringDude/go-urljoin v0.0.0-20210915051633-a34cd1bd9546/go.mod h1:mR5zwmQT9QukYmBx5VLGEpbOVtfZr8Oh0Nl74QphRLg=
 github.com/TheBoringDude/go-urljoin v0.0.1 h1:cn8uWW8IPlvIG5WOla8VKJXD/RGLtPagRKEqgoQjZmU=
 github.com/TheBoringDude/go-urljoin v0.0.1/go.mod h1:mR5zwmQT9QukYmBx5VLGEpbOVtfZr8Oh0Nl74QphRLg=
 github.com/World-of-Cryptopups/eosrpc.go v0.0.0-20210916072214-5bbb86fdd79c h1:wqU1ioOVqcHSkT984RtnNU39pgPCZalryLkVUbsqFio=
 github.com/World-of-Cryptopups/eosrpc.go v0.0.0-20210916072214-5bbb86fdd79c/go.mod h1:LVNwgFd/7SOzAydL2PcoIfRUGwMx/DII1TZv/mosZa8=
+github.com/World-of-Cryptopups/eosrpc.go v0.0.1 h1:DeAd+SpgOHB9pnJol2jNyn5Kovcig5J2UA/GQmGqNKk=
+github.com/World-of-Cryptopups/eosrpc.go v0.0.1/go.mod h1:LVNwgFd/7SOzAydL2PcoIfRUGwMx/DII1TZv/mosZa8=
 github.com/diamondburned/arikawa/v2 v2.1.0 h1:nyX5TEf7kuSdCTiZDMlURbabKrLTqPQGDBqnwX+qF9E=
 github.com/diamondburned/arikawa/v2 v2.1.0/go.mod h1:e+lhS20ni2luFEU06Pc8paCxgZL99/RZb77dOC82CF0=
+github.com/enescakir/emoji v1.0.0 h1:W+HsNql8swfCQFtioDGDHCHri8nudlK1n5p2rHCJoog=
+github.com/enescakir/emoji v1.0.0/go.mod h1:Bt1EKuLnKDTYpLALApstIkAjdDrS/8IAgTkKp+WKFD0=
 github.com/gorilla/schema v1.2.0 h1:YufUaxZYCKGFuAq3c96BOhjgd5nmXiOY9NGzF247Tsc=
 github.com/gorilla/schema v1.2.0/go.mod h1:kgLaKoK1FELgZqMAVxx/5cbj0kT+57qxUrAlIO2eleU=
 github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
