@@ -3,46 +3,30 @@ package main
 import (
 	"log"
 	"os"
+	"strings"
 
+	"github.com/World-of-Cryptopups/minidis"
 	"github.com/World-of-Cryptopups/waxxie/commands"
-	"github.com/diamondburned/arikawa/v2/bot"
-	"github.com/diamondburned/arikawa/v2/discord"
-	"github.com/diamondburned/arikawa/v2/gateway"
+	"github.com/bwmarrin/discordgo"
 	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
-	var token = os.Getenv("TOKEN")
+	guilds := strings.Split(os.Getenv("GUILDS"), ",")
 
-	if token == "" {
-		log.Fatal("Missing TOKEN!")
-	}
+	// new minidis handler
+	bot := minidis.New(os.Getenv("TOKEN"))
 
-	commands := &commands.Bot{}
-	bot.Run(token, commands, func(c *bot.Context) error {
-		c.HasPrefix = bot.NewPrefix("?")
-		c.EditableCommands = true
-
-		// do not show unknown commands error
-		c.SilentUnknown.Command = true
-		c.SilentUnknown.Subcommand = true
-
-		c.AddIntents(gateway.IntentDirectMessages) // for dm messages
-		c.AddIntents(gateway.IntentGuildMessages)  // for guild or server messages
-		c.AddIntents(gateway.IntentGuilds)
-
-		c.Gateway.Identifier.IdentifyData = gateway.IdentifyData{
-			Token: c.Token,
-			Presence: &gateway.UpdateStatusData{
-				Activities: []discord.Activity{
-					{
-						Name: "Wax Chain API",
-						Type: discord.WatchingActivity,
-					},
-				},
-			},
-		}
-
-		return nil
+	bot.OnReady(func(s *discordgo.Session, i *discordgo.Ready) {
+		log.Println("Bot is ready!")
 	})
+
+	// sync commands to these guilds only
+	bot.SyncToGuilds(guilds...)
+
+	bot.AddCommand(commands.InfoCMD)
+
+	if err := bot.Run(); err != nil {
+		log.Fatalln(err)
+	}
 }
